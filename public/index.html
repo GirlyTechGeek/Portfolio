@@ -64,7 +64,7 @@
   <script>
   !(function($) {
   "use strict";
-  
+
   // Preloader
   $(window).on('load', function() {
     if ($('#preloader').length) {
@@ -148,7 +148,7 @@
 
   $(window).on('scroll', function() {
     var cur_pos = $(this).scrollTop() + 300;
-
+   
     nav_sections.each(function() {
       var top = $(this).offset().top,
         bottom = top + $(this).outerHeight();
