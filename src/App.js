@@ -443,7 +443,7 @@ function App() {
 
       </div>
     </section>
-    <section id="services" class="services">
+    {/* <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -534,8 +534,8 @@ function App() {
         </div>
 
       </div>
-    </section>
-    <section id="testimonials" class="testimonials section-bg">
+    </section> */}
+    {/* <section id="testimonials" class="testimonials section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -602,7 +602,7 @@ function App() {
         </div>
 
       </div>
-    </section>
+    </section> */}
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
@@ -675,7 +675,7 @@ function App() {
   </main>
   <footer id="footer">
     <div class="container">
-      <h3>Brandon Johnson</h3>
+      <h3>Anna Asunka</h3>
       <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
