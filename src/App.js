@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
+import PWAPrompt from 'react-ios-pwa-prompt';
+import PWAInstallerPrompt from 'react-pwa-installer-prompt';
 
 export default class App extends Component  {
   constructor(props){
@@ -46,6 +48,15 @@ export default class App extends Component  {
   return (
     <div className="App">
       <body>
+      <PWAPrompt promptOnVisit={1} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
+      <PWAInstallerPrompt 
+      render={({ onClick }) => (
+        <button type="button" onClick={onClick}> // make sure you pass onClick
+          Install
+        </button>
+      )}
+      callback={(data) => console.log(data)} 
+    />
         <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
         <header id="header" class="d-flex flex-column justify-content-center">
           <nav class="nav-menu">
@@ -61,6 +72,7 @@ export default class App extends Component  {
         </header>
         <section id="hero" class="d-flex flex-column justify-content-center">
           <div class="container" data-aos="zoom-in" data-aos-delay="100">
+            <h2 id="demo"></h2>
             <h1>Anna Asunka</h1>
             <p>I'm <span className="typed" data-typed-items="Software Developer, Big Data Enthusiast"></span></p>
             <div class="social-links">
@@ -98,7 +110,7 @@ export default class App extends Component  {
                         <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 12 July 1997</li>
                         <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 23</li>
                         <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +233 505358483</li>
-                        <li><i class="icofont-rounded-right"></i> <strong>City:</strong> City : Greater Accra</li>
+                        <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Greater Accra</li>
                       </ul>
                     </div>
                     <div class="col-lg-6">
@@ -167,7 +179,7 @@ export default class App extends Component  {
                     </div>
                   </div>
                   <div class="progress">
-                    <span class="skill">CSS <i class="val">90%</i></span>
+                    <span class="skill">CSS <i class="val">50%</i></span>
                     <div class="progress-bar-wrap">
                       <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -181,13 +193,13 @@ export default class App extends Component  {
                 </div>
                 <div class="col-lg-6">
                   <div class="progress">
-                    <span class="skill">WordPress/CMS <i class="val">50%</i></span>
+                    <span class="skill">WordPress/CMS <i class="val">55%</i></span>
                     <div class="progress-bar-wrap">
                       <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                   <div class="progress">
-                    <span class="skill">ReactJS <i class="val">95%</i></span>
+                    <span class="skill">ReactJS <i class="val">85%</i></span>
                     <div class="progress-bar-wrap">
                       <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>

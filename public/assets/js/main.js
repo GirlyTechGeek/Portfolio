@@ -4,7 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-export default !(function($) {
+!(function($) {
   "use strict";
 
   // Preloader
@@ -135,7 +135,7 @@ export default !(function($) {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
     });
   }, {
-    offset: '80%'
+    offset: '90%'
   });
 
   // Init AOS
