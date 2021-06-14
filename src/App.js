@@ -4,8 +4,6 @@ import './App.css';
 import emailjs from 'emailjs-com';
 import PWAPrompt from 'react-ios-pwa-prompt';
 import PWAInstallerPrompt from 'react-pwa-installer-prompt';
-import Prompt from './Prompt'
-import ReactPWAInstallProvider from "react-pwa-install";
 
 export default class App extends Component  {
   constructor(props){
@@ -51,18 +49,17 @@ export default class App extends Component  {
 
   render(){
   return (
-    <div id="preview">
+    <div className="App">
       <body data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
-      <ReactPWAInstallProvider enableLogging ><Prompt/></ReactPWAInstallProvider>
       <PWAPrompt promptOnVisit={1} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
-      {/* <PWAInstallerPrompt 
-      render={({ onClick }) => (
-        <button type="button" onClick={onClick}> // make sure you pass onClick
-          Install
-        </button>
-      )}
-      callback={(data) => console.log(data)} 
-    /> */}
+      <PWAInstallerPrompt 
+      // render={({ onClick }) => (
+      //   <button type="button" onClick={onClick}> // make sure you pass onClick
+      //     Install
+      //   </button>
+      // )}
+      // callback={(data) => console.log(data)} 
+    />
         <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
         <header id="header" class="d-flex flex-column justify-content-center">
           <nav class="nav-menu">
