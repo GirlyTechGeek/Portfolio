@@ -125,13 +125,51 @@ function checkValidServiceWorker(swUrl, config) {
 }
 
 export function unregister() {
+  // if ('serviceWorker' in navigator) {
+  //   navigator.serviceWorker.ready
+  //     .then((registration) => {
+  //       registration.unregister();
+  //     })
+  //     .catch((error) => {
+  //       console.error(error.message);
+  //     });
+  // }
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready
-      .then((registration) => {
-        registration.unregister();
-      })
-      .catch((error) => {
-        console.error(error.message);
+    navigator.serviceWorker.register('/service-worker.js', {
+        scope: './'
+    }).then(function (registration) {
+        var serviceWorker;
+        if (registration.installing) {
+            serviceWorker = registration.installing;
+        } else if (registration.waiting) {
+            serviceWorker = registration.waiting;
+        } else if (registration.active) {
+            serviceWorker = registration.active;
+        }
+        if (serviceWorker) {
+            // logState(serviceWorker.state);
+            serviceWorker.addEventListener('statechange', function (e) {
+                // logState(e.target.state);
+            });
+        }
+    }).catch(function (error) {
+        // Something went wrong during registration. The service-worker.js file
+        // might be unavailable or contain a syntax error.
+    });
+    window.addEventListener('beforeinstallprompt', function(e) {
+      // beforeinstallprompt Event fired
+      console.log('beforeinstallprompt Event fired');
+      // e.userChoice will return a Promise.
+      // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
+          e.userChoice.then(function(choiceResult) {
+              console.log(choiceResult.outcome);
+              if(choiceResult.outcome == 'dismissed') {
+              console.log('User cancelled home screen install');
+              }
+              else {
+              console.log('User added to home screen');
+              }
+          });
       });
-  }
+}
 }

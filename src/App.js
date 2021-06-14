@@ -4,6 +4,8 @@ import './App.css';
 import emailjs from 'emailjs-com';
 import PWAPrompt from 'react-ios-pwa-prompt';
 import PWAInstallerPrompt from 'react-pwa-installer-prompt';
+import Prompt from './Prompt'
+import ReactPWAInstallProvider from "react-pwa-install";
 
 export default class App extends Component  {
   constructor(props){
@@ -44,19 +46,23 @@ export default class App extends Component  {
       window.location.reload(false)
     }, 5000);
   }
+
+
+
   render(){
   return (
-    <div className="App">
-      <body>
+    <div id="preview">
+      <body data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+      <ReactPWAInstallProvider enableLogging ><Prompt/></ReactPWAInstallProvider>
       <PWAPrompt promptOnVisit={1} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
-      <PWAInstallerPrompt 
+      {/* <PWAInstallerPrompt 
       render={({ onClick }) => (
         <button type="button" onClick={onClick}> // make sure you pass onClick
           Install
         </button>
       )}
       callback={(data) => console.log(data)} 
-    />
+    /> */}
         <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
         <header id="header" class="d-flex flex-column justify-content-center">
           <nav class="nav-menu">
@@ -71,10 +77,12 @@ export default class App extends Component  {
           </nav>
         </header>
         <section id="hero" class="d-flex flex-column justify-content-center">
-          <div class="container" data-aos="zoom-in" data-aos-delay="100">
-            <h2 id="demo"></h2>
+          <div class="container aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+            {/* <h2 id="demo"></h2> */}
             <h1>Anna Asunka</h1>
-            <p>I'm <span className="typed" data-typed-items="Software Developer, Big Data Enthusiast"></span></p>
+            <p>I'm <span class="typed" data-typed-items="Software Developer, Big Data Enthusiast"></span>
+              <span class="typed-cursor" aria-hidden="true" >|</span>            
+            </p>
             <div class="social-links">
               <a href="https://mobile.facebook.com/arnah.lilichin?ref=bookmarks" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="https://www.instagram.com/ms_ann.xo/" class="instagram"><i class="bx bxl-instagram"></i></a>
