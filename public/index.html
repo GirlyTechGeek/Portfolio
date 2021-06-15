@@ -25,6 +25,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
+    
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet"> 
  
@@ -247,6 +248,21 @@
   });
 
 })(jQuery);
+  </script>
+  <script>
+    $('.counter-count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+          
+          //chnage count up speed here
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
   </script>
     </div>
     <!--

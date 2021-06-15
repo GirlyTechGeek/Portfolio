@@ -45,8 +45,6 @@ export default class App extends Component  {
     }, 5000);
   }
 
-
-
   render(){
   return (
     <div className="App">
@@ -77,8 +75,10 @@ export default class App extends Component  {
           <div class="container aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
             {/* <h2 id="demo"></h2> */}
             <h1>Anna Asunka</h1>
-            <p>I'm <span class="typed" data-typed-items="Software Developer, Big Data Enthusiast"></span>
-              <span class="typed-cursor" aria-hidden="true" >|</span>            
+            <p>I'm a <span class="typed" data-typed-items="Software Developer, Big Data Enthusiast">
+              <span><p>Software Developer, Big Data Enthusiast</p> </span>
+            </span>
+              {/* <span class="typed-cursor" aria-hidden="true" >|</span>             */}
             </p>
             <div class="social-links">
               <a href="https://mobile.facebook.com/arnah.lilichin?ref=bookmarks" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -137,11 +137,12 @@ export default class App extends Component  {
                 <h2>Facts</h2>
                 <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
               </div>
+              <div className="counter">
               <div class="row">
                 <div class="col-lg-3 col-md-6">
                   <div class="count-box">
                     <i class="icofont-simple-smile"></i>
-                    <span data-toggle="counter-up">7</span>
+                    <span class="counter-count">7</span>
                     <p>Happy Clients</p>
                   </div>
                 </div>
@@ -167,6 +168,7 @@ export default class App extends Component  {
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </section>
           <section id="skills" class="skills section-bg">
@@ -177,38 +179,48 @@ export default class App extends Component  {
               </div>
               <div class="row skills-content">
                 <div class="col-lg-6">
+                  <div >
                   <div class="progress">
                     <span class="skill">HTML <i class="val">100%</i></span>
                     <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{"width":"60%"}} ></div>
                     </div>
                   </div>
+                  </div>
+                  <div style={{"width":"50%"}} >
                   <div class="progress">
                     <span class="skill">CSS <i class="val">50%</i></span>
                     <div class="progress-bar-wrap">
                       <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
+                  </div>
+                  <div style={{"width":"85%"}} >
                   <div class="progress">
                     <span class="skill">JavaScript <i class="val">85%</i></span>
                     <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" ></div>
                     </div>
+                  </div>
                   </div>
                 </div>
                 <div class="col-lg-6">
+                  <div style={{"width":"55%"}}>
                   <div class="progress">
                     <span class="skill">WordPress/CMS <i class="val">55%</i></span>
                     <div class="progress-bar-wrap">
                       <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
-                  <div class="progress">
+                  </div>
+                 <div style={{"width":"85%"}}>
+                 <div class="progress">
                     <span class="skill">ReactJS <i class="val">85%</i></span>
                     <div class="progress-bar-wrap">
                       <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
+                 </div>
                 </div>
               </div>
             </div>
