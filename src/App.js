@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import one from './assets/one.png';
+import two from './assets/two.png';
+import three from './assets/three.png';
+import four from './assets/four.png';
+import five from './assets/five.jpeg';
 import emailjs from 'emailjs-com';
 import PWAPrompt from 'react-ios-pwa-prompt';
 import PWAInstallerPrompt from 'react-pwa-installer-prompt';
@@ -48,15 +52,9 @@ export default class App extends Component  {
   render(){
   return (
     <div className="App">
-      <body data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+      <body  data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
       <PWAPrompt promptOnVisit={1} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
-      <PWAInstallerPrompt 
-      // render={({ onClick }) => (
-      //   <button type="button" onClick={onClick}> // make sure you pass onClick
-      //     Install
-      //   </button>
-      // )}
-      // callback={(data) => console.log(data)} 
+      <PWAInstallerPrompt
     />
         <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
         <header id="header" class="d-flex flex-column justify-content-center">
@@ -73,13 +71,11 @@ export default class App extends Component  {
         </header>
         <section id="hero" class="d-flex flex-column justify-content-center">
           <div class="container aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
-            {/* <h2 id="demo"></h2> */}
-            <h1>Anna Asunka</h1>
-            <p>I'm a <span class="typed" data-typed-items="Software Developer, Big Data Enthusiast">
-              <span><p>Software Developer, Big Data Enthusiast</p> </span>
-            </span>
-              {/* <span class="typed-cursor" aria-hidden="true" >|</span>             */}
+            <h1> Hi, I'm Anna Asunka.</h1>
+            <p>I build applications for the web
             </p>
+            <span>I am a software developer specializing in building (and designing) fintech solutions for the web.<br/>
+            Currently I am focused on building web solutions at Dalex Finance</span>
             <div class="social-links">
               <a href="https://mobile.facebook.com/arnah.lilichin?ref=bookmarks" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="https://www.instagram.com/ms_ann.xo/" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -93,16 +89,17 @@ export default class App extends Component  {
             <div class="container" data-aos="fade-up">
               <div class="section-title">
                 <h2>About</h2>
-                <p>A multi-skilled Information Science professional, passionate about the
-                  development and efficient application of IT tools and resources towards national
-                  development, and seeking a bigger and challenging opportunity to contribute in this
-                  direction, whilst upgrading my knowledge and skills in all related and applicable
-                  areas
+                <p>
+                  Talented Software Development leader experienced in producing, integrating, and translating customer
+                  requirements into testable engineering plans. Optimizing structures and processes to accomplish customer
+                  targets and promote loyalty while directing large-scale teams or working hands-on to complete projects.
+                  Expert in diverse programming languages, including Angular and React
                 </p>
               </div>
               <div class="row">
                 <div class="col-lg-4">
-                  <img src="https://media-exp3.licdn.com/dms/image/C4D03AQGS3QYMymxSKA/profile-displayphoto-shrink_800_800/0/1613674345934?e=1628726400&v=beta&t=c_Gcm5zPlHrWlL3D6DfpeMrgBAxEOC6owSDmK6dTXxU" class="img-fluid" alt=""/>
+                  {/*<img src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg"/>*/}
+                  <img src={five} class="img-fluid" alt="picture"/>
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content">
                   <h3> Software Developer.</h3>
@@ -112,115 +109,71 @@ export default class App extends Component  {
                   <div class="row">
                     <div class="col-lg-6">
                       <ul>
-                        <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 12 July 1997</li>
-                        <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 23</li>
-                        <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +233 505358483</li>
-                        <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Greater Accra</li>
+                        <li> <strong>Birthday:</strong> 12 July 1997</li>
+                        <li><strong>Age:</strong> 24</li>
+                        <li> <a class="changes" href="tel:0505358483"><strong>Phone:</strong> +233 505358483 </a></li>
+                        <li> <strong>City:</strong> Greater Accra</li>
                       </ul>
                     </div>
                     <div class="col-lg-6">
                       <ul>
-                        <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Bachelor</li>
-                        <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> asunkaa41@gmail.com</li>
-                        <li><i class="icofont-rounded-right"></i> <strong>GitHub:</strong><a href="https://github.com/GirlyTechGeek">GirlyTechGeek</a></li>
-                        <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+                        <li><strong>Degree:</strong> Masters</li>
+                        <li> <strong>Email:</strong> asunkaa41@gmail.com</li>
+                        <li> <strong>GitHub:</strong><a href="https://github.com/GirlyTechGeek"> GirlyTechGeek</a></li>
+                        <li><strong>Freelance:</strong> Available</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-          <section id="facts" class="facts">
-            <div class="container" data-aos="fade-up">
-              <div class="section-title">
-                <h2>Facts</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-              </div>
-              <div className="counter">
-              <div class="row">
-                <div class="col-lg-3 col-md-6">
-                  <div class="count-box">
-                    <i class="icofont-simple-smile"></i>
-                    <span class="counter-count">7</span>
-                    <p>Happy Clients</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-                  <div class="count-box">
-                    <i class="icofont-document-folder"></i>
-                    <span data-toggle="counter-up">15</span>
-                    <p>Projects</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                  <div class="count-box">
-                    <i class="icofont-live-support"></i>
-                    <span data-toggle="counter-up">1,463</span>
-                    <p>Hours Of Support</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                  <div class="count-box">
-                    <i class="icofont-users-alt-5"></i>
-                    <span data-toggle="counter-up">2</span>
-                    <p>Microsoft certifications</p>
-                  </div>
-                </div>
-              </div>
               </div>
             </div>
           </section>
           <section id="skills" class="skills section-bg">
             <div class="container" data-aos="fade-up">
               <div class="section-title">
-                <h2>Skills</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <h2>Skills & Technologies</h2>
+                <p>Here are a few technologies I’ve been working with recently:</p>
               </div>
               <div class="row skills-content">
-                <div class="col-lg-6">
-                  <div >
-                  <div class="progress">
-                    <span class="skill">HTML <i class="val">100%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{"width":"60%"}} ></div>
-                    </div>
-                  </div>
-                  </div>
-                  <div style={{"width":"50%"}} >
-                  <div class="progress">
-                    <span class="skill">CSS <i class="val">50%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  </div>
-                  <div style={{"width":"85%"}} >
-                  <div class="progress">
-                    <span class="skill">JavaScript <i class="val">85%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" ></div>
-                    </div>
-                  </div>
-                  </div>
+                <div class="col-lg-4">
+                  <ol>
+                    <li><p>JavaScript (ES6+)</p>
+                    </li>
+                    <li>
+                      <p>Angular</p>
+                    </li>
+                    <li>
+                      <p>Ionic</p>
+                    </li>
+                  </ol>
+
                 </div>
-                <div class="col-lg-6">
-                  <div style={{"width":"55%"}}>
-                  <div class="progress">
-                    <span class="skill">WordPress/CMS <i class="val">55%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  </div>
-                 <div style={{"width":"85%"}}>
-                 <div class="progress">
-                    <span class="skill">ReactJS <i class="val">85%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                 </div>
+                <div class="col-lg-4">
+                  <ol>
+                    <li>
+                      <p>React</p>
+                    </li>
+                    <li>
+                      <p>TypeScript</p>
+                    </li>
+                    <li>
+                      <p>NodeJs</p>
+                    </li>
+                  </ol>
+                </div>
+                <div className="col-lg-4">
+                  <ol>
+                    <li>
+                      <p>Scrum</p>
+                    </li>
+                    <li>
+                      <p>M365</p>
+                    </li>
+                    <li>
+                      <p>Azure</p>
+                    </li>
+                  </ol>
+
                 </div>
               </div>
             </div>
@@ -229,34 +182,37 @@ export default class App extends Component  {
             <div class="container" data-aos="fade-up">
               <div class="section-title">
                 <h2>Resume</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <p>
+                 I am an Innovative and deadline-driven Software Developer with 3+ years of
+                  experience developing user-centered web solutions and market driven software
+                  from the initial concept to the final, polished deliverable.
+                </p>
               </div>
               <div class="row">
                 <div class="col-lg-6">
-                  <h3 class="resume-title">Sumary</h3>
-                  <div class="resume-item pb-0">
-                    <h4>Anna Asunka</h4>
-                    <p><em>Innovative and deadline-driven Software Developer with 1+ years of experience developing user-centered websites and market driven softwares from initial concept to final, polished deliverable.</em></p>
-                    <ul>
-                      <li>Accra, Greater Accra Ghana</li>
-                      <li>+233 505358483</li>
-                      <li>asunkaa41@gmail.com</li>
-                    </ul>
-                  </div>
+
                   <h3 class="resume-title">Education</h3>
-                  <div class="resume-item">
-                    <h4>Masters certificate in Software engineering</h4>
-                    <h5>2020</h5>
-                    <p><em>German Institute of Business and Technology</em></p>
+                  <div className="resume-item">
+                    <h4>Masters</h4>
+                    <h5>2021-2023</h5>
+                    <h6>MSc IT and Law</h6>
+                    <p><em>Ghana Institute of Business and Public Administration, Ghana</em></p>
                   </div>
                   <div class="resume-item">
-                    <h4>Accelerator Data Engineering</h4>
+                    <h4>Professional certificate </h4>
+                    <h5>2021</h5>
+                    <h6>Software engineering</h6>
+                    <p><em>Azubi Africa, Ghana</em></p>
+                  </div>
+                  <div class="resume-item">
+                    <h4> Data Engineering Fellow</h4>
                     <h5>2019</h5>
                     <p><em>Blossom Accadamy, Ghana</em></p>
                   </div>
                   <div class="resume-item">
-                    <h4>Bachelor of Arts in Information Studies &amp; Sociology</h4>
+                    <h4>Bachelor of Arts</h4>
                     <h5>2016 - 2019</h5>
+                    <h6>Information Studies &amp; Sociology</h6>
                     <p><em>University of Ghana, Ghana</em></p>
                   </div>
                   <h3 class="resume-title">Certifications</h3>
@@ -273,13 +229,25 @@ export default class App extends Component  {
                   <div class="resume-item">
                     <h4>Security Auditor</h4>
                     <h5>2019</h5>
-                    <p><em>No Expiry, Safetica</em></p>
+                    <p><em>No Expiry</em></p>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <h3 class="resume-title">Professional Experience</h3>
-                  <div class="resume-item">
+                  <div className="resume-item">
                     <h4>Software Developer</h4>
+                    <h5>2022 - Present</h5>
+                    <p><em>Dalex Finance, Greater Accra, Ghana </em></p>
+                    <ul>
+                      <li>Developed the Dalex Swift investment application which increased the investment client base by 12%</li>
+                      <li>Developed an eligibility script in python to check the eligibility requirement of loan seekers.
+                      </li>
+                      <li>	Revised, modularized, and updated old code bases to modern development standards, reducing operating costs and improving functionality. </li>
+                      {/*<li>Developed a DevOps pipeline for web app hosting to IIS in Azure DevOps</li>*/}
+                    </ul>
+                  </div>
+                  <div class="resume-item">
+                    <h4>Software Developer (External)</h4>
                     <h5>2020 - Present</h5>
                     <p><em>Linqworth Limited, Greater Accra, Ghana </em></p>
                     <ul>
@@ -301,17 +269,7 @@ export default class App extends Component  {
                       <li>Security and Operations center analyst for CITSOC</li>
                     </ul>
                   </div>
-                  <div class="resume-item">
-                    <h4>CITSYS stationed at Dalex Finance</h4>
-                    <h5>2018 - 2019</h5>
-                    <p><em>CITSYS, Osu Greater-Accra, Ghana</em></p>
-                    <ul>
-                      <li>Developed numerous software compliance policies and deployment modules.</li>
-                      <li>Managed up to 3 projects or tasks at a given time while under pressure</li>
-                      <li>Assisted in client migrations into Microsoft Azure</li>
-                      <li>Security and Operations center analyst for CITSOC</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -335,32 +293,67 @@ export default class App extends Component  {
               <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    {/* <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""/> */}
+                     <img src={three} class="img-fluid mage" alt=""/>
                     <div class="portfolio-info">
-                      <h4>App 1</h4>
-                      <p>App</p>
-                      <div class="portfolio-links">
-                        <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                      </div>
+                      <small>A PWA built with Angular Ionic.<br/> Create profile, View all investments, <br/>Create goals, and 24hr services <br/> all at the tap of <br/>one button.</small>
+                      {/*<p>PWA</p>*/}
+                      {/*<div class="portfolio-links">*/}
+                      {/*  <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>*/}
+                      {/*  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>*/}
+                      {/*</div>*/}
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                   <div class="portfolio-wrap">
-                    {/* <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""/> */}
+                     <img src={two} class="img-fluid mage" alt=""/>
                     <div class="portfolio-info">
-                      <h4>Web 3</h4>
-                      <p>Web</p>
-                      <div class="portfolio-links">
-                        <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                      </div>
+                      <small>An investment back office portal <br/> built in Angular and designed with Nebula<br/>View in realtime Investment audits, user request <br/>with a state of the art KYC automated service</small>
+                      {/*<p>Web</p>*/}
+                      {/*<div class="portfolio-links">*/}
+                      {/*  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>*/}
+                      {/*  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>*/}
+                      {/*</div>*/}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6 portfolio-item filter-web">
+                  <div className="portfolio-wrap">
+                    <img src={one} className="img-fluid mage" alt=""/>
+                    <div className="portfolio-info">
+                      <small>A web application built to run scripts. <br/>Checking eligible loan applicants, <br/>Calculating credit scores and viewing loan applicants</small>
+                      {/*<p>Web</p>*/}
+                      {/*<div className="portfolio-links">*/}
+                      {/*  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" className="venobox"*/}
+                      {/*     title="Web 3"><i className="bx bx-plus"></i></a>*/}
+                      {/*  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"*/}
+                      {/*     className="venobox" title="Portfolio Details"><i className="bx bx-link"></i></a>*/}
+                      {/*</div>*/}
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                <div className="col-lg-4 col-md-6 portfolio-item filter-web">
+                  <div className="portfolio-wrap">
+                    <a href="http://healthaid.linqtest.com/">
+                    <img src={four} className="img-fluid " alt=""/>
+                    <div className="portfolio-info">
+                      {/*<small>A web application built to run scripts. <br/>Checking eligible loan applicants, <br/>Calculating credit scores and viewing loan applicants</small>*/}
+                      <p>Website</p>
+                      <div className="portfolio-links">
+                        {/*<a href={four} data-gall="portfolioGallery" className="venobox"*/}
+                        {/*   title="Web 3"><i className="bx bx-plus"></i></a>*/}
+                        {/*<a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"*/}
+                        {/*   className="venobox" title="Portfolio Details"><i className="bx bx-link"></i></a>*/}
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </section>
           <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
@@ -438,7 +431,7 @@ export default class App extends Component  {
           </div>
         </footer>
         <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-        <div id="preloader"></div>
+        {/*<div id="preloader"></div>*/}
       </body>
     </div>
     );
